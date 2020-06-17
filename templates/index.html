@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block body %}
+    <h3 style="margin: 0 0 0 20px;">首页</h3>
+    </br>
+{% endblock %}
+
+{% block message %}
+    {% if username %}
+        <div style="font-size: large; margin: 0 0 0 20px;">
+            <p><span>欢迎，{{ username }}</span></p>
+            <p><span>您的电话号码是：{{ telephone }}</span></p>
+        </div>
+    {% endif %}
+{% endblock %}

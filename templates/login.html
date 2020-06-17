@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block body %}
+    <form action="" method="post">
+        <table style="margin: 0 0 0 20px">
+            <tbody>
+                <tr>
+                    <td>Username:</td>
+                    <td><input type="text" name="username"></td>
+                </tr>
+                <tr>
+                    <td>Password:</td>
+                    <td><input type="password" name="password"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="submit" value="Submit"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <ul>
+                            {% for message in messages %}
+                                <li style="color: red;">{{ message.tags }}/{{ message }}</li>
+                            {% endfor %}
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+{% endblock %}
